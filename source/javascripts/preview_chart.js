@@ -3,6 +3,9 @@ var data;
 var pymChild = new pym.Child();
 
 function create_Chart(){
+
+console.log("inside preview");
+console.log(data);
 var maxWidth = 960;
 rightPadding = 5;
 var margin = {top: 20, right: 30, bottom: 30, left: 40},
@@ -88,10 +91,10 @@ $(document).ready(function() {
   
   pymChild.sendMessage('childLoaded', 'ready');
 
-  pymChild.onMessage('updateData', function(data) {
-    console.log('----------- received message', data);
-    data = JSON.parse(data);
-    console.log(data.data)
+  pymChild.onMessage('updateData', function(message) {
+    console.log('----------- received message', message);
+    message = JSON.parse(message);
+    data = message.data
     create_Chart();
   })
 
