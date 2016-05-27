@@ -2,6 +2,8 @@
   "name": "Bar charts",
   "description": "Bar chart",
   "instructions": "Add as many bars as you want",
+  "preview_type": "live",
+  "sample_data": "data/autotune.json",
   "type": "app",
   "tags": ["Example"],
   "thumbnail": "thumbnail.jpg",
