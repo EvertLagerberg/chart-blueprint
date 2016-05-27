@@ -1,11 +1,4 @@
-var data = [
-  {name: "Locke",value:  0.6},
-  {name: "Reyes",value:  0.08},
-  {name: "Ford",value: 0.15},
-  {name: "Jarrah",value: 0.16},
-  {name: "Shephard",value: 0.23},
-  {name: "Kwon",value: 0.50}
-];
+
 
 //var pymChild = new pym.Child();
 
@@ -23,7 +16,7 @@ var x = d3.scale.ordinal()
     .rangeBands([0, width], .1);
 
 var y = d3.scale.linear()
-	.domain([0, 1])
+	.domain([0, 10])
     .range([height,0]);
 
 var xAxis = d3.svg.axis()
