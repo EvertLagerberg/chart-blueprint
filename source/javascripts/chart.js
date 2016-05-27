@@ -7,7 +7,7 @@ var data = [
   {name: "Kwon",value: 0.50}
 ];
 
-var pymChild = new pym.Child();
+//var pymChild = new pym.Child();
 
 function create_Chart(){
 var maxWidth = 960;
@@ -78,7 +78,7 @@ chart.append("g")
     .style("text-anchor", "end")
     .text("Frequency");
 
-  pymChild.sendHeight();
+  //pymChild.sendHeight();
 }
 
 
