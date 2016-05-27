@@ -74,27 +74,15 @@ chart.append("g")
   pymChild.sendHeight();
 }
 
-  $(window).on('load resize', function(){
-    console.log('load/resize');
-    pymChild.sendHeight();
-  });
-
-
-$(document).ready(function () {
-	console.log("ready");
-    data = AUTOTUNE.data;
-    create_Chart();
-  });
-
 
 
 
 $(document).ready(function() {
-  if(window.location.hash === '#new'){
+
     console.log("ready");
     data = AUTOTUNE.data;
     create_Chart();
-  }
+  
   pymChild.sendMessage('childLoaded', 'ready');
 
   pymChild.onMessage('updateData', function(data) {

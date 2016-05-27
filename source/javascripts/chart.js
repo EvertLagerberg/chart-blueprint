@@ -71,7 +71,8 @@ chart.append("g")
     .style("text-anchor", "end")
     .text("Frequency");
 
-  pymChild.sendHeight();
+
+ pymChild.sendHeight()
 }
 
 
