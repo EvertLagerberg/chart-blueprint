@@ -1,31 +1,27 @@
 {
   "name": "Bar charts",
   "description": "Bar chart",
-  "instructions": "### Instructions\n Add as many images and captions as needed.",
+  "instructions": "Add as many bars as you want",
   "type": "app",
   "tags": ["Example"],
   "thumbnail": "thumbnail.jpg",
-  "authors": ["Kavya Sukumar <kavya.sukumar@voxmedia.com>"],
+  "authors": ["Evert Lagerberg"],
   "form": {
     "schema": {
       "type": "object",
       "properties": {
-        "images": {
+        "data": {
           "type": "array",
-          "title": "Images",
+          "title": "Bar",
           "items": {
-              "title":"<span class='label label-primary'>Image</span>",
+              "title":"<span class='label label-primary'>Value</span>",
             "type": "object",
             "minItems": 2,
             "properties": {
-              "src": {
-                "title": "Image Url",
-                "type": "string",
+              "value": {
+                "title": "value",
+                "type": "number",
                 "required": true
-              },
-              "caption": {
-                "title": "Caption (optional)",
-                "type": "string"
               }
             }
           }
