@@ -81,6 +81,7 @@ chart.append("g")
 $(document).ready(function () {
 	console.log("ready");
     data = AUTOTUNE.data;
+    console.log(data);
     create_Chart();
   });
 
