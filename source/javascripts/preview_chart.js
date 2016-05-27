@@ -1,4 +1,4 @@
-
+var data;
 
 var pymChild = new pym.Child();
 
