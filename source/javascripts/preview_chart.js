@@ -91,7 +91,7 @@ $(document).ready(function() {
   pymChild.onMessage('updateData', function(data) {
     console.log('----------- received message', data);
     data = JSON.parse(data);
-    console.log(data)
+    console.log(data.data)
     create_Chart();
   })
 
