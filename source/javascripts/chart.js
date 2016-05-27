@@ -72,7 +72,7 @@ chart.append("g")
     .text("Frequency");
 
 
- pymChild.sendHeight()
+
 }
 
 

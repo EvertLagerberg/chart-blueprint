@@ -71,11 +71,14 @@ chart.append("g")
     .style("text-anchor", "end")
     .text("Frequency");
 
-  pymChild.sendHeight();
+  
 }
 
 
-
+  $(window).on('load resize', function(){
+    console.log('load/resize');
+    pymChild.sendHeight();
+  });
 
 $(document).ready(function() {
 
