@@ -83,7 +83,7 @@ chart.append("g")
 $(document).ready(function() {
 
     console.log("ready");
-    data = AUTOTUNE.bars;
+    data = AUTOTUNE.data;
     create_Chart();
   
   pymChild.sendMessage('childLoaded', 'ready');
