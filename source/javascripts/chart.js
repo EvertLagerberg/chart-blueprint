@@ -76,7 +76,7 @@ chart.append("g")
 }
 
 
-
+ window.onload = function () { pymChild.sendHeight(); }
 
 $(document).ready(function () {
 	console.log("ready");
