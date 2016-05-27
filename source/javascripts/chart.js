@@ -26,7 +26,7 @@ var xAxis = d3.svg.axis()
 var yAxis = d3.svg.axis()
     .scale(y)
     .orient("left")
-    .ticks(5, "%");
+    .ticks(5);
 
 
 
