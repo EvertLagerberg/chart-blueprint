@@ -80,7 +80,7 @@ chart.append("g")
 
 $(document).ready(function () {
 	console.log("ready");
-    data = AUTOTUNE.data;
+    data = AUTOTUNE.bars;
     create_Chart();
   });
 
