@@ -164,7 +164,6 @@ var Chart = (function(window, d3) {
 
   $(window).on('load resize', function(){
     console.log('load/resize');
-    Chart.create_chart(); 
     pymChild.sendHeight();
     Chart.render();
   });
@@ -177,6 +176,7 @@ window.onload = function (){
     console.log('----------- received message', message);
     message = JSON.parse(message);
     data = message.data;
+    console.log(Chart);
     Chart.create_chart(); 
     Chart.render();
   })
