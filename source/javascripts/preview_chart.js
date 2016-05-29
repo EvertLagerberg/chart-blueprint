@@ -32,8 +32,6 @@ var Chart = (function(window, d3) {
   var chart;
   var bar;
 
-  create_chart();
-  render();
 
 
 
