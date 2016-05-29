@@ -33,6 +33,7 @@ var Chart = (function(window, d3) {
   var bar;
 
   create_chart();
+  render();
 
 
 

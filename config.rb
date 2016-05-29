@@ -67,6 +67,6 @@ configure :build do
   set :http_prefix, data.autotune.base_url
 
   activate :asset_hash
-  activate :minify_javascript
+  #activate :minify_javascript
   activate :minify_css
 end
