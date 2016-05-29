@@ -6,7 +6,7 @@ var data = AUTOTUNE.data;
 
 var pymChild = new pym.Child();
 
-function Chart(){
+var Chart = (function(window, d3) {
 
   //svg width
   var width;
@@ -37,18 +37,7 @@ function Chart(){
 
 
 
-  
-
-  return {
-    render: render
-  }
-
-
-
-}
-
-
-function create_chart() {
+  function create_chart() {
 
     console.log("ran once");
 
@@ -164,14 +153,22 @@ function create_chart() {
 
   }
 
+  return {
+    create_chart:create_chart
+  }
 
-  $(window).on('resize', function(){
+
+
+})(window, d3);
+
+
+  $(window).on('load resize', function(){
     console.log('load/resize');
     pymChild.sendHeight();
-    render()
+    Chart.render();
   });
 
-window.onload = function (){
+$(document).ready(function() {
   
   pymChild.sendMessage('childLoaded', 'ready');
 
@@ -179,9 +176,10 @@ window.onload = function (){
     console.log('----------- received message', message);
     message = JSON.parse(message);
     data = message.data;
-    Chart();
+    Chart.create_chart();
+    Chart.render();
   })
 
-}
+});
 
 
