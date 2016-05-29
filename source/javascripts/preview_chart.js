@@ -70,7 +70,7 @@ var Chart = (function(window, d3) {
 
     bar.style("fill", "steelblue");
 
-
+    render();
 
   }
 
@@ -177,7 +177,6 @@ $(document).ready(function() {
     data = message.data;
     console.log(data);
     Chart.create_chart();
-    Chart.render();
   })
 
 });
