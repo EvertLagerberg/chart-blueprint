@@ -4,7 +4,7 @@ var wrapper = $('#wrapper');
 
 var data = AUTOTUNE.data;
 
-var pymChild;
+var pymChild = new pym.Child();
 
 var Chart = (function(window, d3) {
 
@@ -74,7 +74,7 @@ var Chart = (function(window, d3) {
   }
 
   function render() {
-
+    pymChild.sendHeight();
     updateDimensions(wrapper.width());
 
     x.rangeBands([0, width], 0.1);
