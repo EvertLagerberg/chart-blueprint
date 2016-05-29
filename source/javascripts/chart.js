@@ -4,7 +4,7 @@ var wrapper = $('#wrapper');
 
 var data = AUTOTUNE.data;
 
-var pymChild;
+var pymChild = new pym.Child();
 
 var Chart = (function(window, d3) {
 
@@ -33,7 +33,7 @@ var Chart = (function(window, d3) {
   var bar;
 
   create_chart();
-  pymChild = new pym.Child({ renderCallback: render()});
+  render();
 
 
 
@@ -77,6 +77,7 @@ var Chart = (function(window, d3) {
   }
 
   function render() {
+    pymChild.sendHeight();
 
     updateDimensions(wrapper.width());
 
@@ -162,6 +163,11 @@ var Chart = (function(window, d3) {
 
 
 })(window, d3);
+
+
+ window.onload = function () { pymChild.sendHeight(); }
+
+ 
 
 
 
