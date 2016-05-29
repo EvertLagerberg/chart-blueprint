@@ -1,6 +1,8 @@
 
 
 var wrapper = $('#wrapper');
+console.log(wrapper);
+console.log(window.innerWidth());
 
 var data = AUTOTUNE.data;
 
