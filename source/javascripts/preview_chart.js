@@ -154,7 +154,8 @@ var Chart = (function(window, d3) {
   }
 
   return {
-    create_chart:create_chart
+    create_chart:create_chart,
+    render:render
   }
 
 
@@ -176,6 +177,7 @@ $(document).ready(function() {
     console.log('----------- received message', message);
     message = JSON.parse(message);
     data = message.data;
+    console.log(data);
     Chart.create_chart();
     Chart.render();
   })
