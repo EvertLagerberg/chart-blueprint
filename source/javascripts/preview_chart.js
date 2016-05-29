@@ -15,7 +15,7 @@ var Chart = (function(window, d3) {
   //svg margins
   var margin = {};
 
-  updateDimensions(wrapper);
+  updateDimensions(window.innerWidth);
 
 
 
@@ -75,7 +75,7 @@ var Chart = (function(window, d3) {
 
   function render() {
     pymChild.sendHeight();
-    updateDimensions(wrapper.width());
+    updateDimensions(window.innerWidth);
 
     x.rangeBands([0, width], 0.1);
     y.range([height, 0]);
@@ -162,6 +162,7 @@ var Chart = (function(window, d3) {
   $(window).on('load resize', function(){
     console.log('load/resize');
     pymChild.sendHeight();
+    Chart.render();
   });
 
 $(document).ready(function() {
