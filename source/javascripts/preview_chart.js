@@ -168,7 +168,7 @@ var Chart = (function(window, d3) {
     Chart.render();
   });
 
-$(document).ready(function() {
+window.onload = function (){
   
   pymChild.sendMessage('childLoaded', 'ready');
 
@@ -180,4 +180,6 @@ $(document).ready(function() {
     Chart.render();
   })
 
-});
+}
+
+
