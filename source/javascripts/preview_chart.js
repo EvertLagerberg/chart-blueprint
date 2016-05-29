@@ -33,10 +33,12 @@ var Chart = (function(window, d3) {
   var bar;
 
   create_chart();
-  pymChild = new pym.Child({ renderCallback: render()});
+
 
 
   function create_chart() {
+
+    console.log("ran once");
 
 
     //initialize domains
@@ -173,6 +175,7 @@ $(document).ready(function() {
     console.log('----------- received message', message);
     message = JSON.parse(message);
     data = message.data;
+    Chart.create_chart(); 
     Chart.render();
   })
 
