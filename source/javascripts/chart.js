@@ -1,7 +1,7 @@
 
 
 var wrapper = $('#wrapper');
-console.log(wrapper);
+console.log(wrapper.width());
 console.log(window.innerWidth)
 
 var data = AUTOTUNE.data;
@@ -17,7 +17,7 @@ var Chart = (function(window, d3) {
   //svg margins
   var margin = {};
 
-  updateDimensions(wrapper);
+  updateDimensions(window.innerWidth);
 
 
 
@@ -81,7 +81,7 @@ var Chart = (function(window, d3) {
   function render() {
     pymChild.sendHeight();
 
-    updateDimensions(wrapper.width());
+    updateDimensions(window.innerWidth);
 
     x.rangeBands([0, width], 0.1);
     y.range([height, 0]);
