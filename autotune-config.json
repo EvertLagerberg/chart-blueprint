@@ -14,12 +14,17 @@
       "properties": {
         "data": {
           "type": "array",
-          "title": "Bar",
+          "title": "Bars",
           "items": {
-              "title":"<span class='label label-primary'>Value</span>",
+            "title": "<span class='label label-primary'>Bar</span>",
             "type": "object",
             "minItems": 2,
             "properties": {
+              "name": {
+                "title": "name",
+                "type": "string",
+                "required": true
+              },
               "value": {
                 "title": "value",
                 "type": "number",
