@@ -165,7 +165,7 @@ function create_chart() {
   }
 
 
-  $(window).on('load resize', function(){
+  $(window).on('resize', function(){
     console.log('load/resize');
     pymChild.sendHeight();
     render()
