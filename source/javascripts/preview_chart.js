@@ -172,7 +172,7 @@ $(document).ready(function() {
     console.log('----------- received message', message);
     message = JSON.parse(message);
     data = message.data
-    Chart;
+    Chart();
   })
 
 });
