@@ -5,6 +5,8 @@ console.log(wrapper.width());
 console.log(window.innerWidth)
 
 var data = AUTOTUNE.data;
+var theme = AUTOTUNE.theme_data.aftonbladet;
+
 
 var pymChild = new pym.Child();
 
@@ -70,7 +72,7 @@ var Chart = (function(window, d3) {
     chart.append("g").attr("class", "x axis")
     chart.append("g").attr("class", "y axis")
 
-    bar.style("fill", "steelblue");
+    bar.style("fill", theme.colors.primary_color);
 
 
 
@@ -171,6 +173,7 @@ var Chart = (function(window, d3) {
 
   pymChild.sendHeight();
   console.log("onload");
+  console.log(theme);
 
 
 
